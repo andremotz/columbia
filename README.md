@@ -55,3 +55,5 @@ Everything necessary can be defined in the sync_config.cfg:
 - Email settings for mail-capabilities
 - Sync source/targets are defined in arrays of the following fields: title, source, target and log. Make sure to keep a proper numbering as shown in the example
 - mail_at_bootup.txt will be send to your mail to notify for the script's activity
+- rsync-output is been written to logfiles. Their output is been used to send it to you via mail
+- smartctl is been used in 1_start.sh to generate smartChecks of your hard disks. Its output will be added to the final mail-report

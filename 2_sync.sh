@@ -13,6 +13,11 @@
 # Update 2016-02-19
 # finalising and adding new rsync-targets
 #
+# Update 2016-06-29
+# adding --no-perms
+# 
+# Update 2016-07-23
+# adding --inplace --timeout=60
 
 source sync_config.cfg
 
@@ -50,7 +55,7 @@ func_backup () {
       echo "$WARNINGS - Aborting script, please start manually!"
       echo "$WARNINGS - Aborting script, please start manually!" > $3
   else
-      rsync -az --size-only $1 $2 > $3 2>&1
+      rsync -az --no-perms --inplace --timeout=60 --size-only $1 $2 > $3 2>&1
   fi
 }
 

@@ -48,7 +48,7 @@ Your Homeserver
 Add the following to your /etc/rc.local to start the script on each machine's startup-process:
 ``` bash
 cd /home/backupper/shellscripts/
-at now + 5 minutes -f 1_start.sh
+at now + 5 minutes -f 1_start.sh && 2_sync.sh && 3_mailandshutdown.sh
 ```
 
 Everything necessary can be defined in the sync_config.cfg:

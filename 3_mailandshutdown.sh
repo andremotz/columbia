@@ -4,7 +4,6 @@ source sync_config.cfg
 
 $logger "Starting 3_mailandshutdown.sh"
 
-# cd /home/backupper/shellscripts/
 ./maileverything.sh
 
 $logger "sending shutdown-command +2 hours"
